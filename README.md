@@ -51,27 +51,9 @@ mvn allure:serve
 
 This command will generate the report, start a local web server, and automatically open the report in your default web browser.
 
-## Test Categories
-
-The test suite includes various categories of tests:
-
-1. **Functional Tests** - Verify the API works correctly with valid parameters
-2. **Error Handling Tests** - Verify proper error responses for invalid inputs
-3. **Data Validation Tests** - Verify data format and content is correct
-
-## Error Handling Approach
-
-This test suite has been designed with a clear distinction between valid and invalid parameters. For invalid inputs, two types of acceptable API responses are tested:
-
-- Option 1: HTTP status code 4xx (client error)
-- Option 2: HTTP status code 200 with error details in the response body (success=false, non-zero error code, error message)
-
 ## Test Reports
 
 - **Allure Reports**: Detailed test execution reports with request/response details
 - `checklist.md`: Complete list of test cases to verify API functionality
 - `test-report.md`: Documentation of detected issues and improvement suggestions
 
-## Additional Information
-
-This testing project was designed to thoroughly test a deliberately unstable API, with test cases that are resilient to API instability while still properly identifying and reporting actual issues.
