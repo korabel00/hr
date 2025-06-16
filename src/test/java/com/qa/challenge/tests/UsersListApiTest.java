@@ -169,7 +169,6 @@ public class UsersListApiTest {
         System.out.println("BUG-001: API response field naming inconsistency. Uses 'idList' instead of 'result' as specified.");
     }
 
-    // Moved from UserApiTest
     @ParameterizedTest
     @ValueSource(strings = {"male", "female", "magic", "McCloud"})
     @DisplayName("GET /users?gender={gender} returns 200 for all valid genders")
